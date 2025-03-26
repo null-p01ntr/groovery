@@ -1,0 +1,76 @@
+{
+	"coffee": [
+		{
+			"name": "Espresso",
+			"available": true
+		},
+		{
+			"name": "Cortado",
+			"available": true
+		},
+		{
+			"name": "Cappuccino",
+			"available": true
+		},
+		{
+			"name": "Caffé Macchiato",
+			"available": true
+		},
+		{
+			"name": "Caffé Latte",
+			"available": true
+		},
+		{
+			"name": "Caffé Mocha",
+			"available": true
+		},
+		{
+			"name": "Americano",
+			"available": true
+		},
+		{
+			"name": "Caramel Latte",
+			"available": true
+		},
+		{
+			"name": "Vanilla Latte",
+			"available": true
+		},
+		{
+			"name": "Spanish Latte",
+			"available": true
+		}
+	],
+	"seasonal_coffee": [
+		{
+			"name": "Toffee Nut Latte",
+			"available": true
+		},
+		{
+			"name": "Lotus Latte",
+			"available": false
+		},
+		{
+			"name": "Mint Mocha",
+			"available": true
+		},
+		{
+			"name": "Salep Latte",
+			"available": false
+		}
+	],
+	"matcha": [
+		{
+			"name": "Matcha",
+			"available": true
+		},
+		{
+			"name": "Matcha Latte",
+			"available": true
+		},
+		{
+			"name": "Special Matcha",
+			"available": true
+		}
+	]
+}

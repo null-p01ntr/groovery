@@ -1,0 +1,133 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #3e2723; /* Dark brown background */
+    color: #d7ccc8; /* Light brown text */
+    line-height: 1.6;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    color: #ffccbc; /* Light orange for the title */
+}
+
+#menu {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #4e342e; /* Slightly lighter brown for the menu container */
+    border-radius: 12px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.menu-category-wrapper {
+    margin-bottom: 20px;
+}
+
+/* Coffee Category */
+.menu-category.coffee {
+    background: #5d4037; /* Medium brown for coffee */
+    color: #ffccbc; /* Light orange text */
+}
+
+.menu-category.coffee:hover {
+    background: #6d4c41; /* Slightly lighter brown on hover */
+}
+
+.menu-item.coffee {
+    background: #6d4c41; /* Medium brown for coffee items */
+    border: 1px solid #5d4037;
+    color: #ffccbc; /* Light orange text */
+}
+
+.menu-item.coffee:hover {
+    background: #795548; /* Slightly lighter brown on hover */
+}
+
+/* Seasonal Coffee Category */
+.menu-category.seasonal_coffee {
+    background: #ff8f00; /* Darkened amber for seasonal coffee */
+    color: #fff3e0; /* Light amber text */
+}
+
+.menu-category.seasonal_coffee:hover {
+    background: #ff6f00; /* Slightly darker amber on hover */
+}
+
+.menu-item.seasonal_coffee {
+    background: #ffb74d; /* Darkened amber for seasonal coffee items */
+    border: 1px solid #ff8f00;
+    color: #fff3e0; /* Light amber text */
+}
+
+.menu-item.seasonal_coffee:hover {
+    background: #ff9800; /* Slightly darker amber on hover */
+}
+
+/* Matcha Category */
+.menu-category.matcha {
+    background: #388e3c; /* Green for matcha */
+    color: #e8f5e9; /* Light green text */
+}
+
+.menu-category.matcha:hover {
+    background: #2e7d32; /* Slightly darker green on hover */
+}
+
+.menu-item.matcha {
+    background: #66bb6a; /* Light green for matcha items */
+    border: 1px solid #388e3c;
+    color: #e8f5e9; /* Light green text */
+}
+
+.menu-item.matcha:hover {
+    background: #43a047; /* Slightly darker green on hover */
+}
+
+/* Shared Styles */
+.menu-category {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.menu-items {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.menu-item {
+    padding: 12px 18px;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+.unavailable {
+    color: #a1887f; /* Muted brown for unavailable items */
+    text-decoration: line-through;
+    background: #4e342e; /* Darker brown for unavailable items */
+    border-color: #3e2723;
+}
+
+.unavailable:hover {
+    transform: none; /* No lift effect for unavailable items */
+}

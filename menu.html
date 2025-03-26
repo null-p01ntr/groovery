@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Groovery Menu</title>
+	<link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+	<h1>💽 Groovery Menu</h1>
+	<div id="menu"></div>
+
+	<script>
+		async function loadMenu() {
+			try {
+				const response = await fetch('items.json');
+
+				// Check if the response is OK
+				if (!response.ok) {
+					throw new Error(`HTTP error! status: ${response.status}`);
+				}
+
+				const data = await response.json();
+
+				// Validate that data is an object
+				if (typeof data !== 'object' || data === null) {
+					throw new Error('Invalid data format: Expected an object');
+				}
+
+				const menuContainer = document.getElementById('menu');
+
+				// Category emojis
+				const categoryEmojis = {
+					coffee: '☕',
+					seasonal_coffee: '🎇',
+					matcha: '🍵'
+				};
+
+				// Iterate over categories in the JSON
+				for (const [category, items] of Object.entries(data)) {
+					// Create a wrapper for the category
+					const categoryWrapper = document.createElement('div');
+					categoryWrapper.className = 'menu-category-wrapper';
+
+					// Add category title with emoji
+					const categoryDiv = document.createElement('div');
+					categoryDiv.className = `menu-category ${category}`;
+					const emoji = categoryEmojis[category] || '📋'; // Default emoji if not defined
+					categoryDiv.textContent = `${emoji} ${category.replace(/_/g, ' ').toUpperCase()}`;
+					categoryWrapper.appendChild(categoryDiv);
+
+					// Add click event to toggle visibility
+					categoryDiv.addEventListener('click', () => {
+						const itemsList = categoryWrapper.querySelector('.menu-items');
+						itemsList.style.display = itemsList.style.display === 'none' ? 'block' : 'none';
+					});
+
+					// Add items under the category
+					if (!Array.isArray(items)) {
+						throw new Error(`Invalid data format for category: ${category}`);
+					}
+
+					items.sort((a, b) => {
+						return a.available === b.available ? 0 : a.available ? -1 : 1;
+					});
+
+					const itemsList = document.createElement('ul');
+					itemsList.className = 'menu-items';
+					itemsList.style.display = 'none'; // Default to collapsed
+					for (const item of items) {
+						const itemLi = document.createElement('li');
+						itemLi.className = `menu-item ${category} ${item.available ? '' : 'unavailable'}`;
+						itemLi.textContent = item.name;
+						itemsList.appendChild(itemLi);
+					}
+					categoryWrapper.appendChild(itemsList);
+
+					menuContainer.appendChild(categoryWrapper);
+				}
+			} catch (error) {
+				console.error('Error loading menu:', error);
+
+				// Display an error message to the user
+				const menuContainer = document.getElementById('menu');
+				menuContainer.textContent = 'Failed to load the menu. Please try again later.';
+			}
+		}
+
+		loadMenu();
+	</script>
+</body>
+
+</html>
