@@ -2,8 +2,9 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #3e2723; /* Dark brown background */
-    color: #d7ccc8; /* Light brown text */
+    background: url('./img/Background_Light.png') no-repeat center center fixed;
+    background-size: cover; /* Ensures the background image covers the entire screen */
+    color: #E5E5CB; /* Light brown text */
     line-height: 1.6;
 }
 
@@ -11,14 +12,30 @@ h1 {
     text-align: center;
     font-size: 2.5rem;
     margin: 20px 0;
-    color: #ffccbc; /* Light orange for the title */
+    color: #E5E5CB; /* Light orange for the title */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.logo {
+    height: 100px; /* Adjust the size of the logo */
 }
 
 #menu {
     max-width: 700px;
     margin: 0 auto;
     padding: 20px;
-    background: #4e342e; /* Slightly lighter brown for the menu container */
+    background: rgba(78, 52, 46, 0.9); /* Slightly transparent dark brown for the menu container */
     border-radius: 12px;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
 }
@@ -30,7 +47,7 @@ h1 {
 /* Coffee Category */
 .menu-category.coffee {
     background: #5d4037; /* Medium brown for coffee */
-    color: #ffccbc; /* Light orange text */
+    color: #E5E5CB; /* Light orange text */
 }
 
 .menu-category.coffee:hover {
@@ -40,7 +57,7 @@ h1 {
 .menu-item.coffee {
     background: #6d4c41; /* Medium brown for coffee items */
     border: 1px solid #5d4037;
-    color: #ffccbc; /* Light orange text */
+    color: #E5E5CB; /* Light orange text */
 }
 
 .menu-item.coffee:hover {
