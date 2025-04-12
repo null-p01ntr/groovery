@@ -25,6 +25,10 @@
 			"available": true
 		},
 		{
+			"name": "Espresso Tonic",
+			"available": false
+		},
+		{
 			"name": "Americano",
 			"available": true
 		},
@@ -48,6 +52,14 @@
 		},
 		{
 			"name": "Lotus Latte",
+			"available": false
+		},
+		{
+			"name": "Espresso Lemonade",
+			"available": false
+		},
+		{
+			"name": "Orange Espresso",
 			"available": false
 		},
 		{

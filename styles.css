@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Skranji:wght@400;700&family=Yusei+Magic&display=swap');
+
+
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    /* font-family: "Yusei Magic", sans-serif; */
+    font-family: "Skranji", system-ui;
     margin: 0;
     padding: 0;
     background: url('./img/Background_Light.png') no-repeat center center fixed;
@@ -75,7 +79,7 @@ header {
 }
 
 .menu-item.seasonal_coffee {
-    background: #ffb74d; /* Darkened amber for seasonal coffee items */
+    background: #c98a2c; /* Darkened amber for seasonal coffee items */
     border: 1px solid #ff8f00;
     color: #fff3e0; /* Light amber text */
 }
@@ -95,7 +99,7 @@ header {
 }
 
 .menu-item.matcha {
-    background: #66bb6a; /* Light green for matcha items */
+    background: #4ca050; /* Light green for matcha items */
     border: 1px solid #388e3c;
     color: #e8f5e9; /* Light green text */
 }
